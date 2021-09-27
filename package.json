@@ -1,0 +1,16 @@
+{
+  "name": "Xuyanz",
+  "productName": "Xuyanz",
+  "description": "Xuyanz",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "user",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "15.0.0"
+  }
+}
