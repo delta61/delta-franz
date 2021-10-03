@@ -1,8 +1,3 @@
-// The "BrowserWindow" class is the primary way to create user interfaces
-// in Electron. A BrowserWindow is, like the name suggests, a window.
-//
-// For more info, see:
-// https://electronjs.org/docs/api/browser-window
 
 const { app, BrowserWindow, BrowserView, ipcMain, Menu, Tray, nativeImage } = require('electron')
 const path = require('path')
@@ -14,6 +9,8 @@ app.whenReady().then(() => {
 		autoHideMenuBar: true,
 		darkTheme: true,
 		icon: './tpl/images/trayicon.png',
+		minWidth: 600,
+		minHeight: 500,
 		webPreferences: {
 			preload: path.join(__dirname, 'preload.js'),
 			devTools: false,
@@ -36,7 +33,6 @@ app.whenReady().then(() => {
 		) {
 			data.w = Math.round(data.w);
 			data.h = Math.round(data.h);
-			console.log(view);
 			view.setBounds({ x: 200, y: 0, width: data.w, height: data.h })
 		}
 	})
